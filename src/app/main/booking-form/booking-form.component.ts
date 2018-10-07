@@ -43,8 +43,7 @@ export class BookingFormComponent implements OnInit {
       // get the cinemas
       flatMap((theatreIds) =>
         this.theatreService.find(theatreIds)
-      ),
-
+      )
     ).subscribe((theatres) => this.theatres.push(theatres));
   }
 
