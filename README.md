@@ -1,4 +1,4 @@
-# CCBill Cinema interview task
+# CCBill Cinema Interview Task
 
 ## Project Details
 
