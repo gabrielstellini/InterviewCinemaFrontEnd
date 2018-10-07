@@ -1,0 +1,23 @@
+<div class="col-md-10 md-offset-1 col-xl-6 offset-xl-3">
+  <h1 class="pt-3">Venue selection</h1>
+
+  <div class="form-row pt-3" >
+    <div class="col-md-12">
+
+      <label>
+        Please select your cinema
+        <select (change)="venueChanged()" [(ngModel)]="selectedVenue" class="form-control">
+          <option value="" disabled>--Select Cinema--</option>
+          <option *ngFor="let theatre of theatres" value="{{theatre.id}}">
+            "{{theatre.cinema.name}}" at ({{theatre.cinema.address}}) - "{{theatre.screenName}}"</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <!--<div>-->
+    <!--<button class="btn btn-secondary pull-right" [disabled]="selectedVenue == null" (click)="addBooking()">Book</button>-->
+  <!--</div>-->
+  <app-seat-select [seats]="seatsData" [filmId]="filmId" (buttonPressed)="refreshSeats()"></app-seat-select>
+
+</div>

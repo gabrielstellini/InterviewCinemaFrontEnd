@@ -1,0 +1,15 @@
+@import "../../../../colours";
+
+.seat{
+  border: 2px solid darkgray;
+}
+
+.seatTaken{
+  background-color: $red;
+  border-color: $red;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+}

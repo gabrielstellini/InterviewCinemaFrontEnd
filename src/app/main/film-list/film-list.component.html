@@ -1,0 +1,7 @@
+<h1 class="pt-4 pb-4">CCBill Cinemas</h1>
+
+<div class="d-inline-block parent">
+  <app-film-item *ngFor="let film of filmData"
+                 title={{film.name}} description={{film.description}}
+                 link="{{film.id}}/bookings"></app-film-item>
+</div>

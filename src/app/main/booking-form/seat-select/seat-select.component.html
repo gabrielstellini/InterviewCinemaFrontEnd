@@ -1,0 +1,19 @@
+<!--<div class="row" *ngFor="let row of seatRows">-->
+  <!--<div class="seat" *ngFor="let seat of row">{{seat.seatId}}</div>-->
+<!--</div>-->
+
+<div *ngIf="seats.length !== 0" class="pt-3 pb-3">
+  Click to book a seat
+</div>
+
+<table style="width:100%">
+  <tr *ngFor="let row of seatRows">
+    <td class="pt-3 pb-3" *ngFor="let seat of row">
+      <button
+        routerLink="{{seat.seatId + '/complete-booking'}}"
+        class="btn btn-primary" [class.seatTaken]="seat.occupied" [disabled]="seat.occupied">
+        {{seat.seatId}}
+      </button>
+    </td>
+  </tr>
+</table>
